@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, name='logout',
         kwargs={'next_page':settings.LOGIN_URL}),
     url(r'^signup/$', views.signup, name='signup'),
-    url(r'^profile/$', views.profile),
+    url(r'^profile/$', views.profile, name='profile'),
 ]

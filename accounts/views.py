@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
@@ -14,6 +15,6 @@ def signup(request):
     return render(request, 'accounts/signup_form.html', {  # 템플릿은 일반적인 form template
         'form': form,
     })
-
+@login_required  #  decorators -> wrapping 역할
 def profile(request):
     return render(request, 'accounts/profile.html')

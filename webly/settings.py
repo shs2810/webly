@@ -52,6 +52,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'webly.urls'
 
+LOGIN_URL = '/accoutns/login/'
+
+LOGIN_REDIRECT_URL = '/accounts/profile/'
+
+LOGOUT_REDERECT_URL = None
+
+AUTH_USER_MODEL = 'auth.User'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -123,3 +131,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
