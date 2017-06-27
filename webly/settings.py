@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'accounts'
+=======
+    'accounts',
+>>>>>>> master
 ]
 
 MIDDLEWARE = [
@@ -51,6 +55,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'webly.urls'
+
+LOGIN_URL = '/accoutns/login/'
+
+LOGIN_REDIRECT_URL = '/accounts/profile/'
+
+LOGOUT_REDERECT_URL = None
+
+AUTH_USER_MODEL = 'auth.User'
 
 TEMPLATES = [
     {
@@ -123,3 +135,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
 ]
+
