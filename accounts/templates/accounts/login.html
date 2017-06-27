@@ -2,11 +2,13 @@
 <html lang="en">
 {% load staticfiles %}  <!-- 오류 해결.. static tag 사용전에 staticfiles template tag library를 load가 필요하다. -->
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+
     <title>위블리(webly)</title>
 
     <!-- Bootstrap Core CSS -->
@@ -44,7 +46,7 @@
             </div>
             <div class="wrap">
                 <p class="form-title">가입하기</p>
-                
+
                 <form class="login">
                 <a class="btn btn-info btn-select btn-select-light">
                     <input type="hidden" class="btn-select-input" id="" name="" value="" />
@@ -55,7 +57,7 @@
                         <li>2016</li>
                         <li>2017</li>
                     </ul>
-                </a>    
+                </a>
                 <a class="btn btn-info btn-select btn-select-light">
                     <input type="hidden" class="btn-select-input" id="" name="" value="" />
                     <span class="btn-select-value">월</span>
@@ -75,7 +77,7 @@
                     </ul>
                 </a>
                 <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
-                
+
                 <p class="form-title">기존 사용자</p>
 
                 <form class="login">
@@ -102,11 +104,11 @@
                         </div>
                     </div>
                 </div>
-                <div>계정을 만들면 위블리에<a href="http://www.jquery2dotnet.com">서비스 약관 및 개인정보보호정책</a>에 동의하는 것으로 간주합니다.</div>
                 </form>
             </div>
         </div>
     </div>
+    <div class="posted-by">Posted By: <a href="http://www.jquery2dotnet.com">Bhaumik Patel</a></div>
 </div>
 
     <!-- jQuery -->
@@ -122,6 +124,5 @@
     <script src="{% static 'login_test/js/login.js' %}"></script>
 
 </body>
-
 
 </html>
