@@ -67,10 +67,10 @@
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs" role="tablist">
                                         <li role="presentation" class="active">
-                                            <a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a>
+                                            <a href="#login" aria-controls="login" role="tab" data-toggle="tab">로그인</a>
                                         </li>
                                         <li role="presentation">
-                                            <a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">Signup</a>
+                                            <a href="#signup" aria-controls="signup" role="tab" data-toggle="tab">가입하기</a>
                                         </li>
                                     </ul>
 
@@ -79,19 +79,20 @@
                                         <div role="tabpanel" class="tab-pane active" id="login">                        <div class="pr-wrap">
                                             <div class="pass-reset">
                                                 <label>
-                                                    Enter the email you signed up with</label>
+                                                    사용했던 이메일을 입력해주세요.</label>
                                                 <input type="email" placeholder="Email" />
                                                 <input type="submit" value="Submit" class="pass-reset-submit btn btn-success btn-sm" />
                                             </div>
                                         </div>
                                             <form action="" method="get" accept-charset="utf-8">
+                                                <br/>
                                                 <p>
-                                                    <a class="btn btn-primary social-login-btn social-facebook" href="/auth/facebook"><i class="fa fa-facebook"></i></a>
-                                                    <a class="btn btn-primary social-login-btn social-twitter" href="/auth/twitter"><i class="fa fa-twitter"></i></a>
+                                                    <a href="/auth/facebook"><img src="{% static 'accounts/img/facebook.png' %}" width="60" height="60"/>&nbsp;&nbsp;</a>
+                                                    <a href="/auth/kakaotalk"><img src="{% static 'accounts/img/kakaotalk.png' %}" width="60" height="60"/></a>
                                                 </p>
                                                 <p>
-                                                    <a class="btn btn-primary social-login-btn social-linkedin" href="/auth/linkedin"><i class="fa fa-linkedin"></i></a>
-                                                    <a class="btn btn-primary social-login-btn social-google" href="/auth/google"><i class="fa fa-google-plus"></i></a>
+                                                    <a href="/auth/google"><img src="{% static 'accounts/img/google.png' %}" width="60" height="60"/>&nbsp;&nbsp;</a>
+                                                    <a href="/auth/naver"><img src="{% static 'accounts/img/naver.png' %}" width="60" height="60"/></a>
                                                 </p>
                                                 <input class="form-control" type="email" name="" value="" placeholder="Email Address">
                                                 <input class="form-control" type="password" name="" value="" placeholder="Password">
