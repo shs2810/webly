@@ -58,7 +58,7 @@ LOGIN_REDIRECT_URL = '/accounts/profile/'
 
 LOGOUT_REDERECT_URL = None
 
-AUTH_USER_MODEL = 'auth.User'
+AUTH_USER_MODEL = 'accounts.MyUser'
 
 TEMPLATES = [
     {
