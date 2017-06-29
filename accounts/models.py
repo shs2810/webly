@@ -4,7 +4,7 @@ from django.contrib.auth.models import (BaseUserManager, AbstractBaseUser, Permi
 # Create your models here.
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, email, lastname, firstname, birthday, sex, password=None):
+    def create_user(self, email, lastname, firstname, sex, password=None):
         if not email:
             raise ValueError('Email를 입력해주세요')
 
@@ -12,7 +12,6 @@ class MyUserManager(BaseUserManager):
             email=MyUserManager.normalize_email(email),
             lastname = lastname,
             firstname = firstname,
-            birthday = birthday,
             sex = sex,
 
         )
@@ -20,11 +19,10 @@ class MyUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, lastname, firstname, birthday, sex, password):
+    def create_superuser(self, email, lastname, firstname, sex, password):
         u = self.create_superuser(email = email,
                                   lastname=lastname,
                                   firstname=firstname,
-                                  birthday=birthday,
                                   sex=sex,
                                   )
         u.is_admin = True
