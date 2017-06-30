@@ -4,12 +4,13 @@ from django.contrib.auth.models import (BaseUserManager, AbstractBaseUser, Permi
 # Create your models here.
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, email, lastname, firstname, sex, password=None):
+    def create_user(self, email, username, lastname, firstname, sex, password=None):
         if not email:
             raise ValueError('Email를 입력해주세요')
 
         user = self.model(
             email=MyUserManager.normalize_email(email),
+            username = username,
             lastname = lastname,
             firstname = firstname,
             sex = sex,
@@ -34,6 +35,13 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
         verbose_name = 'email',
         max_length = 255,
         unique = True,
+    )
+    username = models.CharField(
+        u'닉네임',
+        max_length=10,
+        blank=False,
+        unique=True,
+        default=''
     )
     lastname = models.CharField(
         u'이름',

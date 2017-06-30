@@ -1,104 +1,14 @@
-body
-{
-    background: url('http://farm3.staticflickr.com/2832/12303719364_c25cecdc28_b.jpg') fixed;
+body{
+    background: url('/static/accounts/img/coffee.jpg') fixed;
     background-size: cover;
     padding: 0;
     margin: 0;
 }
 
-.wrap
-{
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
+.vertical-offset-100{
+    padding-top:100px;
 }
-
-p.form-title
-{
-    font-family: 'Open Sans' , sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    color: #FFFFFF;
-    margin-top: 5%;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
-
-form
-{
-    width: 250px;
-    margin: 0 auto;
-}
-
-form.login input[type="text"], form.login input[type="password"]
-{
-    width: 100%;
-    margin: 0;
-    padding: 5px 10px;
-    background: 0;
-    border: 0;
-    border-bottom: 1px solid #FFFFFF;
-    outline: 0;
-    font-style: italic;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #FFFFFF;
-    outline: 0;
-}
-
-form.login input[type="submit"]
-{
-    width: 100%;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-top: 16px;
-    outline: 0;
-    cursor: pointer;
-    letter-spacing: 1px;
-}
-
-form.login input[type="submit"]:hover
-{
-    transition: background-color 0.5s ease;
-}
-
-form.login .remember-forgot
-{
-    float: left;
-    width: 100%;
-    margin: 10px 0 0 0;
-}
-form.login .forgot-pass-content
-{
-    min-height: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-form.login label, form.login a
-{
-    font-size: 12px;
-    font-weight: 400;
-    color: #FFFFFF;
-}
-
-form.login a
-{
-    transition: color 0.5s ease;
-}
-
-form.login a:hover
-{
-    color: #2ecc71;
-}
-
+/*password reset*/
 .pr-wrap
 {
     width: 100%;
@@ -110,7 +20,6 @@ form.login a:hover
     z-index: 999;
     display: none;
 }
-
 .show-pass-reset
 {
     display: block !important;
@@ -169,98 +78,107 @@ form.login a:hover
 {
     transition: background-color 0.5s ease;
 }
-.posted-by
-{
-    position: absolute;
-    bottom: 26px;
-    margin: 0 auto;
-    color: #FFF;
-    background-color: rgba(0, 0, 0, 0.66);
-    padding: 10px;
-    left: 45%;
+
+/*form*/
+.my-form{
+width: 80%;
+margin: 0 auto;
+position: relative;
+z-index: 9;
 }
 
-/*btn-selct*/
-
-.btn-select {
-    position: relative;
-    padding: 0;
-    min-width: 80px;
-    width: 10%;
-    border-radius: 0;
-    margin-bottom: 20px;
+.main-form .nav > li{
+width: 50%;
+}
+.main-form .nav-tabs > li > a{
+border-radius: 0;
+display: inline-block;
+width: 100%;
+text-align: center;
+outline: 0;
+text-transform: uppercase;
+color: #0ebbcb;
+font-weight: 600;
+font-size: 13px;
+}
+.main-form .nav-tabs > li > a:hover{
+color: #0ebbcb;
+}
+.main-form .form-control{
+margin-top: 15px;
+height: 50px;
+border-radius: 0;
+box-shadow: none;
+border:1px solid #f0f0f0;
+}
+.main-form .form-control:focus{
+border-color: #0ebbcb;
+}
+.main-form .checkbox{
+margin-left: 20px;
+color: #999;
+}
+.main-form .checkbox a{
+color: #0ebbcb;
+}
+.main-form .btn-submit{
+display: block;
+background: #0ebbcb;
+color: #fff;
+border-radius: 0;
+width: 100%;
+text-transform: uppercase;
+margin-top: 15px;
+padding: 12px;
+}
+.main-form .tab-content{
+padding: 0px 0;
 }
 
-.btn-select .btn-select-value {
-    padding: 6px 12px;
-    display: block;
-    position: relative;
-    left: 0;
-    right: 34px;
-    text-align: left;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    border-top: none !important;
-    border-bottom: none !important;
-    border-left: none !important;
+/*sns*/
+.social-login-btn {
+  margin: 5px;
+  width: 60px;
+  font-size: 250%;
+  padding: 0;
 }
 
-.btn-select .btn-select-arrow {
-    float: right;
-    line-height: 20px;
-    padding: 6px 10px;
-    top: 0;
+.social-login-more {
+  width: 45%;
 }
 
-.btn-select ul {
-    display: none;
-    background-color: white;
-    color: black;
-    clear: both;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border-top: none !important;
-    position: absolute;
-    left: -1px;
-    right: -1px;
-    top: 33px;
-    z-index: 999;
+.social-google {
+  background-color: #da573b;
+  border-color: #be5238;
+}
+.social-google:hover{
+  background-color: #be5238;
+  border-color: #9b4631;
 }
 
-.btn-select ul li {
-    padding: 3px 6px;
-    text-align: left;
+.social-twitter {
+  background-color: #1daee3;
+  border-color: #3997ba;
+}
+.social-twitter:hover {
+  background-color: #3997ba;
+  border-color: #347b95;
 }
 
-.btn-select ul li:hover {
-    background-color: #f4f4f4;
+.social-facebook {
+  background-color: #4c699e;
+  border-color: #47618d;
+}
+.social-facebook:hover {
+  background-color: #47618d;
+  border-color: #3c5173;
 }
 
-.btn-select ul li.selected {
-    color: white;
+.social-linkedin {
+  background-color: #4875B4;
+  border-color: #466b99;
 }
-
-/* info Start */
-.btn-select.btn-info:hover, .btn-select.btn-info:active, .btn-select.btn-info.active {
-    border-color: #46b8da;
+.social-linkedin:hover {
+  background-color: #466b99;
+  border-color: #3b5a7c;
 }
-
-.btn-select.btn-info ul li.selected {
-    background-color: #46b8da;
-    color: white;
-}
-
-.btn-select.btn-info ul {
-    border: #46b8da 1px solid;
-}
-
-.btn-select.btn-info .btn-select-value {
-    background-color: #5bc0de;
-    border: #46b8da 1px solid;
-}
-
-.btn-select.btn-info:hover, .btn-select.btn-info.active {
-    background-color: #269abc;
-}
-/* info End */
