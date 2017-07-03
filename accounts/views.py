@@ -63,3 +63,4 @@ def login(request):
           authentication_form = LoginForm,
           template_name = 'accounts/login_form.html',
           extra_context={'providers':providers})
+    return render(request, 'accounts/profile.html')
