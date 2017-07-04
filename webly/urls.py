@@ -19,8 +19,14 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^home/', include('home.urls')),
+<<<<<<< HEAD
     url(r'^life_class/', include('life_class.urls')),
     url(r'^life_place/', include('life_place.urls')),
     url(r'^life_school/', include('life_school.urls')),
+=======
+    url(r'', include('social.apps.django_app.urls', namespace='social')),
+
+>>>>>>> 47db58ecda0e57ed182893b3185e7d72e7670b8f
 ]
