@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'home',
+    'life_class',
+    'life_place',
+    'life_school',
 ]
 
 MIDDLEWARE = [

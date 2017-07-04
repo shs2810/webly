@@ -49,7 +49,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../html/01home.html">
+            <a class="navbar-brand" href="/home">
                 <img alt="Brand" src="{% static 'img/logo_white.png' %}">
             </a>
         </div>
@@ -57,8 +57,8 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
 
             <ul class="nav navbar-nav">
-		        <li><a href="../html/01home.html">인생수업</a></li>
-                <li><a href="../html/03bookmark-editor.html">인생맛집</a></li>
+		        <li><a href="/home">인생수업</a></li>
+                <li><a href="/home/home_place">인생맛집</a></li>
                 <li><a href="../html/05make-magazine.html">인생학교</a></li>
             </ul>
 	    <ul class="nav navbar-nav navbar-right">
@@ -79,12 +79,14 @@
 <nav class="navbar navbar-default2 sidebar" role="navigation">
     <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1"aria-expanded="false">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>      
+      </button>
+        <a class="navbar-brand">
+                나의정보
+        </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -130,10 +132,11 @@
 <section>
 <div class="container">
 <div class="row">
-  <h1 class="page-header text-center">Edit Profile</h1>
     <!-- left column -->
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="text-center">
+          <br/>
+          <br/>
         <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
         <h6>Upload a different photo...</h6>
         <input type="file" class="text-center center-block well well-sm">

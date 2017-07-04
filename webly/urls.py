@@ -20,4 +20,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^home/', include('home.urls')),
+    url(r'^life_class/', include('life_class.urls')),
+    url(r'^life_place/', include('life_place.urls')),
+    url(r'^life_school/', include('life_school.urls')),
 ]
