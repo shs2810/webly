@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:social="http://www.w3.org/1999/xhtml">
 {% load staticfiles %}  <!-- 오류 해결.. static tag 사용전에 staticfiles template tag library를 load가 필요하다. -->
+{% load socialaccount %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,20 +85,38 @@
                                                 <input type="submit" value="Submit" class="pass-reset-submit btn btn-success btn-sm" />
                                             </div>
                                         </div>
+                                            <a href="{% url 'social:begin' 'facebook' %}"><button class="btn btn-primary" style="width: 40%">FB Login</button></a>
+                                            {{ providers }}
+                                            <!--
+                                            {% block content %}
                                             <form action="" method="get" accept-charset="utf-8">
                                                 <br/>
                                                 <p>
-                                                    <a href="/auth/facebook"><img src="{% static 'accounts/img/facebook.png' %}" width="60" height="60"/>&nbsp;&nbsp;</a>
-                                                    <a href="/auth/kakaotalk"><img src="{% static 'accounts/img/kakaotalk.png' %}" width="60" height="60"/></a>
+                                                    <ul>{% for provider in providers %}
+                                                         <li>
+                                                         {% if provider.social_app %}
+                                                         <a href="{% provider_login_url provider.id %}">
+                                                            <img src="{% static 'accounts/img/facebook.png' %}" width="60" height="60"/>&nbsp;&nbsp;
+                                                         </a>
+                                                         {% else %}
+                                                         <a>
+                                                         Provider {{ provider.name }} 설정이 필요합니다.
+                                                         </a>
+                                                         {% endif %}
+                                                         </li>
+                                                         {% endfor %}
+                                                    </ul>
+                                             -->
+                                                    <!--  카카오톡   -->
                                                 </p>
                                                 <p>
-                                                    <a href="/auth/google"><img src="{% static 'accounts/img/google.png' %}" width="60" height="60"/>&nbsp;&nbsp;</a>
-                                                    <a href="/auth/naver"><img src="{% static 'accounts/img/naver.png' %}" width="60" height="60"/></a>
+                                                    <!--  구글 네이버   -->
                                                 </p>
                                                 <input class="form-control" type="email" name="" value="" placeholder="Email Address">
                                                 <input class="form-control" type="password" name="" value="" placeholder="Password">
                                                 <div class="checkbox"><input type="checkbox" name="" value=""> Remember. <a href="javascript:void(0)"  class="forgot-pass">Forgot Password?</a></div>
                                                 <input class="btn btn-submit" type="submit" name="" value="Login">
+                                                {% endblock %}
                                                 <div class="posted-by">계정을 만들면 위블리에  <a href="http://www.jquery2dotnet.com">서비스 약관 및 개인정보호정책</a>에 동의하는 것으로 간주합니다.</div>
                                             </form>
                                         </div>

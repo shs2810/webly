@@ -39,7 +39,29 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'home',
+    'social_django',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.linkedin',
+    'allauth.socialaccount.providers.twitter',
+
+
 ]
+
+SOCIAL_AUTH_FACEBOOK_KEY = '119900661949532'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'd11afaf5b4f03bc717d2a847a3d7d880'
+
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+FACEBOOK_EXTENDED_PERMISSIONS = ['email', 'picture']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,11 +71,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+'social_django.middleware.SocialAuthExceptionMiddleware',
+
 ]
 
 ROOT_URLCONF = 'webly.urls'
 
-LOGIN_URL = '/accoutns/login/'
+LOGIN_URL = '/accounts/login/'
 
 LOGIN_REDIRECT_URL = '/accounts/profile/'
 
@@ -72,6 +96,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',  # <--
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -109,6 +135,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend', # 기본 인증 백엔드
+    'allauth.account.auth_backends.AuthenticationBackend', # 추가
+]
+SITE_ID = 1
+
+SOCIALACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
