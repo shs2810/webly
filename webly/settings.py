@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'home',
+<<<<<<< HEAD
+    'life_class',
+    'life_place',
+    'life_school',
+=======
     'social_django',
     'django.contrib.sites',
     'allauth',
@@ -50,6 +55,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.kakao',
 
 
+>>>>>>> 47db58ecda0e57ed182893b3185e7d72e7670b8f
 ]
 
 SOCIAL_AUTH_FACEBOOK_KEY = '119900661949532'
