@@ -85,15 +85,11 @@
                                                 <input type="submit" value="Submit" class="pass-reset-submit btn btn-success btn-sm" />
                                             </div>
                                         </div>
-                                            <a href="{% url 'social:begin' 'facebook' %}"><button class="btn btn-primary" style="width: 40%">FB Login</button></a>
-                                            {{ providers }}
-                                            <!--
                                             {% block content %}
                                             <form action="" method="get" accept-charset="utf-8">
                                                 <br/>
                                                 <p>
                                                     <ul>{% for provider in providers %}
-                                                         <li>
                                                          {% if provider.social_app %}
                                                          <a href="{% provider_login_url provider.id %}">
                                                             <img src="{% static 'accounts/img/facebook.png' %}" width="60" height="60"/>&nbsp;&nbsp;
@@ -102,12 +98,11 @@
                                                          <a>
                                                          Provider {{ provider.name }} 설정이 필요합니다.
                                                          </a>
+
                                                          {% endif %}
-                                                         </li>
                                                          {% endfor %}
                                                     </ul>
-                                             -->
-                                                    <!--  카카오톡   -->
+
                                                 </p>
                                                 <p>
                                                     <!--  구글 네이버   -->

@@ -15,16 +15,16 @@ def login(request):
     providers = []
     for provider in get_providers():
         try:
-            provider.social_app = SocialApp.objects.get(provider.id, sites=settings.SITE_ID)
+            provider.social_app = SocialApp.objects.get(provider=provider.id, sites=settings.SITE_ID)
         except SocialApp.DoesNotExist:
             provider.social_app = None
         providers.append(provider)
-
     return auth_login(request,
-          authentication_form = LoginForm,
+         authentication_form = LoginForm,
           template_name = 'accounts/login.html',
           extra_context={'providers':providers})
 
 @login_required
 def profile(request) :
     return render(request, 'accounts/profile.html')
+
